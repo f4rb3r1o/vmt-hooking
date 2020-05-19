@@ -1,0 +1,2 @@
+# vmt-hooking
+VMT hooking is a technique where you hook one (or more) VMT(Virtual Method Table) entries with a pointer to other function. Thus, when the process calls a virtual function and fetches the function pointer to be called, it will eventually execute your code. In this example, I've create a buggy application that suffers from a data leak vulnerability, if exploited correctly, leaking the target class this pointer and allow this technique to work. I use meterpreter shellcode as my hook function opcodes.
